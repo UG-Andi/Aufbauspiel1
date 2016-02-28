@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
+<<<<<<< HEAD
 using UnityEngine.UI;
+=======
+>>>>>>> origin/master
 using System.Collections;
 
 public class TaxManager : MonoBehaviour {
@@ -17,6 +20,7 @@ public class TaxManager : MonoBehaviour {
 
     [Header("Tier 1 Houses")]
     public int houseTier1Tax;           //HousesTier1
+<<<<<<< HEAD
     public int newHousesTier1;   
     public int housesTier1;
     private int housesTier1TotalTaxes;
@@ -51,6 +55,23 @@ public class TaxManager : MonoBehaviour {
 
         tradeSlider = GameObject.Find("TradeSlider").GetComponent<Slider>();
         industrySlider = GameObject.Find("IndustrySlider").GetComponent<Slider>();
+=======
+    public int newHousesTier1;
+    private int housesTier1TotalTaxes;
+    private int housesTier1;
+
+    [Header("Tier 1 Trades")]
+    public int tradeTier1Tax;
+    public int newTradeTier1;
+    private int tradeTier1TotalTaxes;
+    private int tradeTier1;
+
+    void Start()
+    {
+        ingameManager = GameObject.FindGameObjectWithTag("Manager").GetComponentInChildren<IngameManager>();
+
+       
+>>>>>>> origin/master
 
     }
 
@@ -77,6 +98,7 @@ public class TaxManager : MonoBehaviour {
             housesTier1TotalTaxes = houseTier1Tax * housesTier1;
         }
 
+<<<<<<< HEAD
                                                                     //House_Tier2
         if (newHousesTier2 != 0)
         {
@@ -85,6 +107,8 @@ public class TaxManager : MonoBehaviour {
             housesTier2TotalTaxes = houseTier2Tax * housesTier2;
         }
 
+=======
+>>>>>>> origin/master
                                                                     //Trade_Tier1
         if (newTradeTier1 != 0)
         {
@@ -97,13 +121,18 @@ public class TaxManager : MonoBehaviour {
 
 
         // FINAL calculations
+<<<<<<< HEAD
         totalTaxes = housesTier1TotalTaxes + housesTier2TotalTaxes + tradeTier1TotalTaxes;
+=======
+        totalTaxes = housesTier1TotalTaxes + tradeTier1TotalTaxes;
+>>>>>>> origin/master
 
         ingameManager.money += totalTaxes;
         ingameManager.income = totalTaxes;
 
         //Resets Taxes
         newHousesTier1 = 0;
+<<<<<<< HEAD
         newHousesTier2 = 0;
         newTradeTier1 = 0;
     
@@ -113,5 +142,8 @@ public class TaxManager : MonoBehaviour {
         tradeSlider.value = demandOnTrade;
         industrySlider.value = demandOnIndustry;
     
+=======
+        newTradeTier1 = 0;
+>>>>>>> origin/master
     }
 }

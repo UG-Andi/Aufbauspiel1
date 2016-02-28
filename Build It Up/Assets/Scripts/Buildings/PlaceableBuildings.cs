@@ -12,7 +12,10 @@ public class PlaceableBuildings : MonoBehaviour {
     public bool isPlaced;
     private BasicBuilding basicBuilding;
     private TradeHouseScript tradeHouseScript;
+<<<<<<< HEAD
     private HouseScript houseScript;
+=======
+>>>>>>> origin/master
 
 
 	// Use this for initialization
@@ -39,8 +42,12 @@ public class PlaceableBuildings : MonoBehaviour {
 
             if (basicBuilding.houseType == BasicBuilding.TypeOfHouse.House)
             {
+<<<<<<< HEAD
                 houseScript = GetComponent<HouseScript>();
                 houseScript.isBuilt = true;
+=======
+                Debug.LogError("No House Script found!");
+>>>>>>> origin/master
             }
 
         }

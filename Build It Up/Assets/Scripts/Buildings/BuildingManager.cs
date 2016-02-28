@@ -11,10 +11,19 @@ public class BuildingManager : MonoBehaviour {
     private GameObject BaubuttonsIndustrie;
     private GameObject Baumenübutton;
     public bool baumenüActive;
+<<<<<<< HEAD
+=======
+    public int buttonIndex;
+>>>>>>> origin/master
 
 	// Use this for initialization
 	void Start ()
     {
+<<<<<<< HEAD
+=======
+        baumenüActive = true;
+        Baumenübutton = GameObject.Find("BuildMenu");
+>>>>>>> origin/master
         buildingPlacement = GetComponent<BuildingPlacement>();
         Auswählbuttons = GameObject.Find("Auswähl-Buttons");
         Auswählbuttons.SetActive(false);      
@@ -24,8 +33,11 @@ public class BuildingManager : MonoBehaviour {
         BaubuttonsGewerbe.SetActive(false);
         BaubuttonsIndustrie = GameObject.Find("BaubuttonsIndustrie");
         BaubuttonsIndustrie.SetActive(false);
+<<<<<<< HEAD
         Baumenübutton = GameObject.Find("Baumenü");
         baumenüActive = true;
+=======
+>>>>>>> origin/master
 	}
 	
 	// Update is called once per frame
@@ -35,7 +47,12 @@ public class BuildingManager : MonoBehaviour {
         {
             Baumenübutton.SetActive(true);
         }
+<<<<<<< HEAD
         else
+=======
+        
+        if (baumenüActive == false)
+>>>>>>> origin/master
         {
             Baumenübutton.SetActive(false);
         }
@@ -108,19 +125,37 @@ public class BuildingManager : MonoBehaviour {
     //Activates when Wohnwagen-Button is pressed
     public void Wohnhaus1 ()
     {
+<<<<<<< HEAD
         buildingPlacement.SetItem(buildings[0]);
         baumenüActive = false;
+=======
+        baumenüActive = false;
+        buttonIndex = 1;
+        buildingPlacement.SetItem(buildings[0]);
+>>>>>>> origin/master
     }
 
     public void Wohnhaus2 ()
     {
+<<<<<<< HEAD
         buildingPlacement.SetItem(buildings[1]);
         baumenüActive = false;
+=======
+        baumenüActive = false;
+        buttonIndex = 2;
+        buildingPlacement.SetItem(buildings[1]);
+>>>>>>> origin/master
     }
 
     public void Store ()
     {
+<<<<<<< HEAD
         buildingPlacement.SetItem(buildings[2]);
         baumenüActive = false;
+=======
+        baumenüActive = false;
+        buttonIndex = 101;
+        buildingPlacement.SetItem(buildings[2]);
+>>>>>>> origin/master
     }
 }

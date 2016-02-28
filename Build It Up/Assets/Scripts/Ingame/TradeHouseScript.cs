@@ -1,10 +1,14 @@
 ﻿using UnityEngine;
 using System.Collections;
+<<<<<<< HEAD
 using System.Collections.Generic;
+=======
+>>>>>>> origin/master
 
 public class TradeHouseScript : MonoBehaviour
 {
 
+<<<<<<< HEAD
     //Referenzen
     private TaxManager taxManager;
     private HouseDatabase houseDB;
@@ -16,6 +20,13 @@ public class TradeHouseScript : MonoBehaviour
 
     [Header("Lower Demand")]
     public int lowerDemand;
+=======
+	//Referenzen
+    private TaxManager taxManager;
+
+    //Ints
+    public int tier;
+>>>>>>> origin/master
 
     //Bools
     public bool isBuilt;
@@ -28,15 +39,22 @@ public class TradeHouseScript : MonoBehaviour
         counter = 0;
         addToTax = false;
         isBuilt = false;
+<<<<<<< HEAD
 
         taxManager = GameObject.FindGameObjectWithTag("Manager").GetComponentInChildren<TaxManager>();
         houseDB = GameObject.Find("HouseDatabase").GetComponent<HouseDatabase>();
+=======
+        taxManager = GameObject.FindGameObjectWithTag("Manager").GetComponentInChildren<TaxManager>();
+
+        tier = 1;
+>>>>>>> origin/master
     }
 
     void Update()
     {
         if (isBuilt && counter == 0)
         {
+<<<<<<< HEAD
             switch (tier)
             {
                 case 1:
@@ -65,3 +83,12 @@ public class TradeHouseScript : MonoBehaviour
         }
     }
 }
+=======
+            taxManager.newTradeTier1++;
+            counter++;
+        }
+
+        //Upgrading - Stuff:
+    }
+}
+>>>>>>> origin/master
